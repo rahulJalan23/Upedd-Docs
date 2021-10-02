@@ -477,16 +477,29 @@
           <tr>
             <th scope="row">1</th>
             <td>POST</td>
-            <td>/admin/register</td>
-            <td>{username,email,password,confpassword,adminKey}</td>
+            <td>/club/OrganizeClub</td>
+            <td>
+              {catagory, title, about, address, organisers , facebook, linkedin,
+              instagram, twitter, github}
+            </td>
             <td>{ msg: "Admin succesfully registered", token, refToken }</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>POST</td>
-            <td>/admin/login</td>
-            <td>{username,password}</td>
-            <td>{token, refToken}</td>
+            <td>PATCH</td>
+            <td>/club/connect/:title</td>
+            <td></td>
+            <td>Club Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/club/:title/update</td>
+            <td>
+              {catagory, title, about, address, organisers , facebook, linkedin,
+              instagram, twitter, github}
+            </td>
+            <td>Club Object</td>
           </tr>
         </tbody>
       </table>
@@ -507,16 +520,85 @@
           <tr>
             <th scope="row">1</th>
             <td>POST</td>
-            <td>/admin/register</td>
-            <td>{username,email,password,confpassword,adminKey}</td>
-            <td>{ msg: "Admin succesfully registered", token, refToken }</td>
+            <td>/event/addevent</td>
+            <td>
+              {title, subtitle, platform, date, month, year, startTime, endTime,
+              eventDescription, link, country, catagory, subcatagory, guest ,
+              facebook, linkedin, instagram, twitter, github}
+            </td>
+            <td>{ msg: "Event succesfully created", result: Event Object }</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/event/events</td>
+            <td></td>
+            <td>[Event Object, Event Object, Event Object ...]</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/event/events/:id</td>
+            <td></td>
+            <td>[Event Object]</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/event/eventsForYou?page="page"&limit="limit"</td>
+            <td></td>
+            <td>[Event Object, Event Object, Event Object ...]</td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>POST</td>
-            <td>/admin/login</td>
-            <td>{username,password}</td>
-            <td>{token, refToken}</td>
+            <td>/event/register</td>
+            <td>{id}</td>
+            <td>Event Object</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h1>User</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Method</th>
+            <th scope="col">Route</th>
+            <th scope="col">Req Headers & Body</th>
+            <th scope="col">Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2</th>
+            <td>POST</td>
+            <td>/user/googleoauth</td>
+            <td>{useridtoken}</td>
+            <td>{ msg: "user succesfully registered and logged in", token }</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>POST</td>
+            <td>/user/confmail</td>
+            <td>{user_name}</td>
+            <td>{ "got email": response }</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/user/resetpassword?name="name"&conf_id="id"</td>
+            <td>{id}</td>
+            <td>User Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>POST</td>
+            <td>/user/changepass</td>
+            <td>{user_id,password,confpassord}</td>
+            <td>User Object</td>
           </tr>
         </tbody>
       </table>
