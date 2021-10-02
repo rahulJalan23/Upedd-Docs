@@ -12,20 +12,21 @@
     />
     <link rel="stylesheet" href="api.css" />
 
-    <title>Hello, world!</title>
+    <title>API Documentation</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
       <div class="container-fluid">
-        <nav class="navbar navbar-light bg-light">
+        <!-- <nav class="navbar navbar-light bg-light">
           <div class="container">
             <a class="navbar-brand" href="#">
               <img alt="img" width="30" height="24" />
             </a>
           </div>
-        </nav>
-        <a class="navbar-brand" href="#">Navbar</a>
+        </nav> -->
+        <a class="navbar-brand" href="#">Api Routes</a>
 
+        <!-- 
         <button
           class="navbar-toggler"
           type="button"
@@ -34,10 +35,11 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
+        
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        -->
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -80,11 +82,11 @@
               Search
             </button>
           </form>
-        </div>
+        </div> -->
       </div>
     </nav>
     <div>
-      <h1>Admin Auth</h1>
+      <h2>Admin Auth</h2>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -205,16 +207,42 @@
             <td>DELETE</td>
             <td>/adminpanel/delete/:id</td>
             <td>{username}</td>
-            <td>{"Blog deleted"}</td>
+            <td>"Blog deleted"</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/adminpanel/allEvents</td>
+            <td></td>
+            <td>[Event Object, Event Object, Event Object ...]</td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>POST</td>
-            <td>/admin/editBlog</td>
-            <td>
-              {username, id, category, title, subheading, tags, body, url}
-            </td>
-            <td>Post Object</td>
+            <td>/adminpanel/setStatusOfEvent</td>
+            <td>{status,id}</td>
+            <td>Event Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/adminpanel/getEventbyStatus/:status</td>
+            <td></td>
+            <td>[Event Object, Event Object, Event Object ...]</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>POST</td>
+            <td>/adminpanel/deleteEvent/:id</td>
+            <td></td>
+            <td>"Event deleted"</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/adminpanel/verifyProfile/:id</td>
+            <td>{id,verify}</td>
+            <td>Profile Object</td>
           </tr>
         </tbody>
       </table>
@@ -234,24 +262,72 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>GET</td>
-            <td>/adminpanel/</td>
-            <td></td>
-            <td>username</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/admin/all/</td>
-            <td></td>
-            <td>[Post Object, Post Object , ..]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
             <td>POST</td>
-            <td>/admin/setStatus/</td>
-            <td>{status,id}</td>
-            <td>[Post Object]</td>
+            <td>/profile/add</td>
+            <td>
+              {name, lastname, about, dob,linkedin, twitter, instagram,
+              facebook, github, intrest}
+            </td>
+            <td>{result}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/profile/getOwnProfile</td>
+            <td></td>
+            <td>{result, email}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/profile/:username</td>
+            <td></td>
+            <td>{result, email}</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>GET</td>
+            <td>/profile/</td>
+            <td></td>
+            <td>[Profile Object, Profile Object, Profile Object ...]</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/profile/connect/:username</td>
+            <td></td>
+            <td>Profile Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/profile/disconnect/:username</td>
+            <td></td>
+            <td>Profile Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/profile/bookmark/:id</td>
+            <td></td>
+            <td>Profile Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/profile/bookmarkdelete/:id</td>
+            <td></td>
+            <td>Profile Object</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PATCH</td>
+            <td>/profile/update</td>
+            <td>
+              {name, lastname, about, dob,linkedin, twitter, instagram,
+              facebook, github, intrest}
+            </td>
+            <td>Profile Object</td>
           </tr>
         </tbody>
       </table>
@@ -271,17 +347,116 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>POST</td>
-            <td>/admin/register</td>
-            <td>{username,email,password,confpassword,adminKey}</td>
-            <td>{ msg: "Admin succesfully registered", token, refToken }</td>
+            <td>GET</td>
+            <td>/blog/</td>
+            <td></td>
+            <td>username</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
+            <th scope="row">1</th>
             <td>POST</td>
-            <td>/admin/login</td>
-            <td>{username,password}</td>
-            <td>{token, refToken}</td>
+            <td>/blog/Add/</td>
+            <td>{catagory, title, subheading, tags, body, url}</td>
+            <td>{ data: "id" }</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>POST</td>
+            <td>/editBlog/</td>
+            <td>{catagory, title, subheading, tags, body, url}</td>
+            <td>Blog Object</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>GET</td>
+            <td>/blog/posts?page="pages"&limit="limit"</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>GET</td>
+            <td>/blog/featured-posts?page="pages"&limit="limit"</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/IdBlog/:id</td>
+            <td></td>
+            <td>BlogPost Object</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/UserBlog/:username</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/getOwnBlog</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/getOtherBlog</td>
+            <td></td>
+            <td>{ data: [BlogPost Object , BlogPostObject, ...] }</td>
+          </tr>
+          <!-- Revisit Bookmark Route -->
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/BookmarkPost</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/ForYou?page="pages"&limit="limit"</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/ConnectionPost?page="pages"&limit="limit"</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>DELETE</td>
+            <td>/blog/delete/:id</td>
+            <td></td>
+            <td>"Blog deleted"</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>POST</td>
+            <td>/blog/:title/addclubblog</td>
+            <td>{catagory, title, subheading, tags, body, url}</td>
+            <td>{ data: "id" }</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>GET</td>
+            <td>/blog/:title/getclubblog</td>
+            <td></td>
+            <td>[BlogPost Object , BlogPostObject, ...]</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td>POST</td>
+            <td>/blog/reportBlog</td>
+            <td>{report,blog_id}</td>
+            <td>BlogPost Object</td>
           </tr>
         </tbody>
       </table>
