@@ -85,523 +85,546 @@
         </div> -->
       </div>
     </nav>
-    <div>
-      <h2>Admin Auth</h2>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/admin/register</td>
-            <td>{username,email,password,confpassword,adminKey}</td>
-            <td>{ msg: "Admin succesfully registered", token, refToken }</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/admin/login</td>
-            <td>{username,password}</td>
-            <td>{token, refToken}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>User Auth</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/user/register</td>
-            <td>{username,email,password,confpassword}</td>
-            <td>{ msg: "user succesfully registered", token ,refToken}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/user/login</td>
-            <td>{username,password}</td>
-            <td>{token, refToken}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>Admin Panel</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>GET</td>
-            <td>/adminpanel/</td>
-            <td></td>
-            <td>username</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/all/</td>
-            <td></td>
-            <td>[Post Object, Post Object , ..]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/adminpanel/setStatus/</td>
-            <td>{status,id}</td>
-            <td>[Post Object]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/IdBlog/:id</td>
-            <td></td>
-            <td>Post Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/UserBlog/:username</td>
-            <td></td>
-            <td>[Post Object, Post Object , ..]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/adminpanel/editBlog</td>
-            <td>
-              {username, id, category, title, subheading, tags, body, url}
-            </td>
-            <td>{result}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>DELETE</td>
-            <td>/adminpanel/delete/:id</td>
-            <td>{username}</td>
-            <td>"Blog deleted"</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/allEvents</td>
-            <td></td>
-            <td>[Event Object, Event Object, Event Object ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/adminpanel/setStatusOfEvent</td>
-            <td>{status,id}</td>
-            <td>Event Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/getEventbyStatus/:status</td>
-            <td></td>
-            <td>[Event Object, Event Object, Event Object ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/adminpanel/deleteEvent/:id</td>
-            <td></td>
-            <td>"Event deleted"</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/adminpanel/verifyProfile/:id</td>
-            <td>{id,verify}</td>
-            <td>Profile Object</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>Profile</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/profile/add</td>
-            <td>
-              {name, lastname, about, dob,linkedin, twitter, instagram,
-              facebook, github, intrest}
-            </td>
-            <td>{result}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/profile/getOwnProfile</td>
-            <td></td>
-            <td>{result, email}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/profile/:username</td>
-            <td></td>
-            <td>{result, email}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/profile/</td>
-            <td></td>
-            <td>[Profile Object, Profile Object, Profile Object ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/profile/connect/:username</td>
-            <td></td>
-            <td>Profile Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/profile/disconnect/:username</td>
-            <td></td>
-            <td>Profile Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/profile/bookmark/:id</td>
-            <td></td>
-            <td>Profile Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/profile/bookmarkdelete/:id</td>
-            <td></td>
-            <td>Profile Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/profile/update</td>
-            <td>
-              {name, lastname, about, dob,linkedin, twitter, instagram,
-              facebook, github, intrest}
-            </td>
-            <td>Profile Object</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>Blog</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>GET</td>
-            <td>/blog/</td>
-            <td></td>
-            <td>username</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/blog/Add/</td>
-            <td>{catagory, title, subheading, tags, body, url}</td>
-            <td>{ data: "id" }</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/editBlog/</td>
-            <td>{catagory, title, subheading, tags, body, url}</td>
-            <td>Blog Object</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>GET</td>
-            <td>/blog/posts?page="pages"&limit="limit"</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>GET</td>
-            <td>/blog/featured-posts?page="pages"&limit="limit"</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/IdBlog/:id</td>
-            <td></td>
-            <td>BlogPost Object</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/UserBlog/:username</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/getOwnBlog</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/getOtherBlog</td>
-            <td></td>
-            <td>{ data: [BlogPost Object , BlogPostObject, ...] }</td>
-          </tr>
-          <!-- Revisit Bookmark Route -->
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/BookmarkPost</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/ForYou?page="pages"&limit="limit"</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/ConnectionPost?page="pages"&limit="limit"</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>DELETE</td>
-            <td>/blog/delete/:id</td>
-            <td></td>
-            <td>"Blog deleted"</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>POST</td>
-            <td>/blog/:title/addclubblog</td>
-            <td>{catagory, title, subheading, tags, body, url}</td>
-            <td>{ data: "id" }</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>GET</td>
-            <td>/blog/:title/getclubblog</td>
-            <td></td>
-            <td>[BlogPost Object , BlogPostObject, ...]</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td>POST</td>
-            <td>/blog/reportBlog</td>
-            <td>{report,blog_id}</td>
-            <td>BlogPost Object</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>Club</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/club/OrganizeClub</td>
-            <td>
-              {catagory, title, about, address, organisers , facebook, linkedin,
-              instagram, twitter, github}
-            </td>
-            <td>{ msg: "Admin succesfully registered", token, refToken }</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/club/connect/:title</td>
-            <td></td>
-            <td>Club Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>PATCH</td>
-            <td>/club/:title/update</td>
-            <td>
-              {catagory, title, about, address, organisers , facebook, linkedin,
-              instagram, twitter, github}
-            </td>
-            <td>Club Object</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>Event</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>POST</td>
-            <td>/event/addevent</td>
-            <td>
-              {title, subtitle, platform, date, month, year, startTime, endTime,
-              eventDescription, link, country, catagory, subcatagory, guest ,
-              facebook, linkedin, instagram, twitter, github}
-            </td>
-            <td>{ msg: "Event succesfully created", result: Event Object }</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/event/events</td>
-            <td></td>
-            <td>[Event Object, Event Object, Event Object ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/event/events/:id</td>
-            <td></td>
-            <td>[Event Object]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/event/eventsForYou?page="page"&limit="limit"</td>
-            <td></td>
-            <td>[Event Object, Event Object, Event Object ...]</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/event/register</td>
-            <td>{id}</td>
-            <td>Event Object</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h1>User</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Method</th>
-            <th scope="col">Route</th>
-            <th scope="col">Req Headers & Body</th>
-            <th scope="col">Response</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/user/googleoauth</td>
-            <td>{useridtoken}</td>
-            <td>{ msg: "user succesfully registered and logged in", token }</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/user/confmail</td>
-            <td>{user_name}</td>
-            <td>{ "got email": response }</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>GET</td>
-            <td>/user/resetpassword?name="name"&conf_id="id"</td>
-            <td>{id}</td>
-            <td>User Object</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POST</td>
-            <td>/user/changepass</td>
-            <td>{user_id,password,confpassord}</td>
-            <td>User Object</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ALL Tables -->
+    <div class="m-3">
+      <!-- Admin Auth -->
+      <div>
+        <h1 class="display-5 px-3">Admin Auth</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/admin/register</td>
+              <td>{username,email,password,confpassword,adminKey}</td>
+              <td>{ msg: "Admin succesfully registered", token, refToken }</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/admin/login</td>
+              <td>{username,password}</td>
+              <td>{token, refToken}</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+      </div>
+      <!-- User Auth -->
+      <div>
+        <h1 class="display-5 px-3">User Auth</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/user/register</td>
+              <td>{username,email,password,confpassword}</td>
+              <td>{ msg: "user succesfully registered", token ,refToken}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/user/login</td>
+              <td>{username,password}</td>
+              <td>{token, refToken}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Admin Panel -->
+      <div>
+        <h1 class="display-5 px-3">Admin Panel</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>GET</td>
+              <td>/adminpanel/</td>
+              <td></td>
+              <td>username</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/all/</td>
+              <td></td>
+              <td>[Post Object, Post Object , ..]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/blog/:category?page="pages"&limit="limit"</td>
+              <td>{}</td>
+              <td>[Blog Object, Blog Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/adminpanel/setStatus/</td>
+              <td>{status,id}</td>
+              <td>[Post Object]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/IdBlog/:id</td>
+              <td></td>
+              <td>Post Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/UserBlog/:username</td>
+              <td></td>
+              <td>[Post Object, Post Object , ..]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/adminpanel/editBlog</td>
+              <td>
+                {username, id, category, title, subheading, tags, body, url}
+              </td>
+              <td>{result}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>DELETE</td>
+              <td>/adminpanel/delete/:id</td>
+              <td>{username}</td>
+              <td>"Blog deleted"</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/allEvents</td>
+              <td></td>
+              <td>[Event Object, Event Object, Event Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/adminpanel/setStatusOfEvent</td>
+              <td>{status,id}</td>
+              <td>Event Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/getEventbyStatus/:status</td>
+              <td></td>
+              <td>[Event Object, Event Object, Event Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/adminpanel/deleteEvent/:id</td>
+              <td></td>
+              <td>"Event deleted"</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/adminpanel/verifyProfile/:id</td>
+              <td>{id,verify}</td>
+              <td>Profile Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Profile -->
+      <div>
+        <h1 class="display-5 px-3">Profile</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/profile/add</td>
+              <td>
+                {name, lastname, about, dob,linkedin, twitter, instagram,
+                facebook, github, intrest}
+              </td>
+              <td>{result}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/profile/getOwnProfile</td>
+              <td></td>
+              <td>{result, email}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/profile/:username</td>
+              <td></td>
+              <td>{result, email}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/profile/</td>
+              <td></td>
+              <td>[Profile Object, Profile Object, Profile Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/profile/connect/:username</td>
+              <td></td>
+              <td>Profile Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/profile/disconnect/:username</td>
+              <td></td>
+              <td>Profile Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/profile/bookmark/:id</td>
+              <td></td>
+              <td>Profile Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/profile/bookmarkdelete/:id</td>
+              <td></td>
+              <td>Profile Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/profile/update</td>
+              <td>
+                {name, lastname, about, dob,linkedin, twitter, instagram,
+                facebook, github, intrest}
+              </td>
+              <td>Profile Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Blog -->
+      <div>
+        <h1 class="display-5 px-3">Blog</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>GET</td>
+              <td>/blog/</td>
+              <td></td>
+              <td>username</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/blog/Add/</td>
+              <td>{catagory, title, subheading, tags, body, url}</td>
+              <td>{ data: "id" }</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/editBlog/</td>
+              <td>{catagory, title, subheading, tags, body, url}</td>
+              <td>Blog Object</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>GET</td>
+              <td>/blog/posts?page="pages"&limit="limit"</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>GET</td>
+              <td>/blog/featured-posts?page="pages"&limit="limit"</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/IdBlog/:id</td>
+              <td></td>
+              <td>BlogPost Object</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/UserBlog/:username</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/getOwnBlog</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/getOtherBlog</td>
+              <td></td>
+              <td>{ data: [BlogPost Object , BlogPostObject, ...] }</td>
+            </tr>
+            <!-- Revisit Bookmark Route -->
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/BookmarkPost</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/ForYou?page="pages"&limit="limit"</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/ConnectionPost?page="pages"&limit="limit"</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>DELETE</td>
+              <td>/blog/delete/:id</td>
+              <td></td>
+              <td>"Blog deleted"</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>POST</td>
+              <td>/blog/:title/addclubblog</td>
+              <td>{catagory, title, subheading, tags, body, url}</td>
+              <td>{ data: "id" }</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>GET</td>
+              <td>/blog/:title/getclubblog</td>
+              <td></td>
+              <td>[BlogPost Object , BlogPostObject, ...]</td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td>POST</td>
+              <td>/blog/reportBlog</td>
+              <td>{report,blog_id}</td>
+              <td>BlogPost Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Club -->
+      <div>
+        <h1 class="display-5 px-3">Club</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/club/OrganizeClub</td>
+              <td>
+                {catagory, title, about, address, organisers , facebook,
+                linkedin, instagram, twitter, github}
+              </td>
+              <td>{ msg: "Admin succesfully registered", token, refToken }</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/club/connect/:title</td>
+              <td></td>
+              <td>Club Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PATCH</td>
+              <td>/club/:title/update</td>
+              <td>
+                {catagory, title, about, address, organisers , facebook,
+                linkedin, instagram, twitter, github}
+              </td>
+              <td>Club Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Event -->
+      <div>
+        <h1 class="display-5 px-3">Event</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>POST</td>
+              <td>/event/addevent</td>
+              <td>
+                {title, subtitle, platform, date, month, year, startTime,
+                endTime, eventDescription, link, country, catagory, subcatagory,
+                guest , facebook, linkedin, instagram, twitter, github}
+              </td>
+              <td>
+                { msg: "Event succesfully created", result: Event Object }
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/event/events</td>
+              <td></td>
+              <td>[Event Object, Event Object, Event Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/event/events/:id</td>
+              <td></td>
+              <td>[Event Object]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/event/eventsForYou?page="page"&limit="limit"</td>
+              <td></td>
+              <td>[Event Object, Event Object, Event Object ...]</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/event/register</td>
+              <td>{id}</td>
+              <td>Event Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- User -->
+      <div>
+        <h1 class="display-5 px-3">User</h1>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Method</th>
+              <th scope="col">Route</th>
+              <th scope="col">Req Headers & Body</th>
+              <th scope="col">Response</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/user/googleoauth</td>
+              <td>{useridtoken}</td>
+              <td>
+                { msg: "user succesfully registered and logged in", token }
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/user/confmail</td>
+              <td>{user_name}</td>
+              <td>{ "got email": response }</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>GET</td>
+              <td>/user/resetpassword?name="name"&conf_id="id"</td>
+              <td>{id}</td>
+              <td>User Object</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>POST</td>
+              <td>/user/changepass</td>
+              <td>{user_id,password,confpassord}</td>
+              <td>User Object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <!-- Made By Rahul Jalan for Upedd -->
     <script
