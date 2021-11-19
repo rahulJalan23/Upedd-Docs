@@ -376,14 +376,14 @@
               <th scope="row">1</th>
               <td>POST</td>
               <td>/blog/Add/</td>
-              <td>{catagory, title, subheading, tags, body, url}</td>
+              <td>{ coverImage, likes, tags, username, catagory, title, subheading, body, url }</td>
               <td>{ data: "id" }</td>
             </tr>
             <tr>
               <th scope="row">1</th>
               <td>POST</td>
               <td>/editBlog/</td>
-              <td>{catagory, title, subheading, tags, body, url}</td>
+              <td>{ coverImage, likes, tags, username, catagory, title, subheading, body, url }</td>
               <td>Blog Object</td>
             </tr>
             <tr>
@@ -545,9 +545,10 @@
               <td>POST</td>
               <td>/event/addevent</td>
               <td>
-                {title, subtitle, platform, date, month, year, startTime,
-                endTime, eventDescription, link, country, catagory, subcatagory,
-                guest , facebook, linkedin, instagram, twitter, github}
+                { eventImage, title, subtitle, country, platform, 
+                language, timezone, day, month, year, startTime, 
+                endTime, catagory, eventDescription, link, subCategory, 
+                guest, linkedin, facebook, instagram, twitter, github, endPromotion }
               </td>
               <td>
                 { msg: "Event succesfully created", result: Event Object }
