@@ -398,7 +398,7 @@
               <td>GET</td>
               <td>/blog/featured-posts?page="pages"&limit="limit"</td>
               <td></td>
-              <td>[BlogPost Object , BlogPostObject, ...]</td>
+              <td>{success:true, posts:[BlogPost Object , BlogPostObject, ...]}</td>
             </tr>
             <tr>
               <th scope="row"></th>
@@ -456,20 +456,6 @@
               <td>/blog/delete/:id</td>
               <td></td>
               <td>"Blog deleted"</td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>POST</td>
-              <td>/blog/:title/addclubblog</td>
-              <td>{catagory, title, subheading, tags, body, url}</td>
-              <td>{ data: "id" }</td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>GET</td>
-              <td>/blog/:title/getclubblog</td>
-              <td></td>
-              <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
               <th scope="row"></th>
