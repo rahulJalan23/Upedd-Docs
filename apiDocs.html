@@ -24,8 +24,8 @@
             </a>
           </div>
         </nav> -->
-        <a class="navbar-brand" href="#">Api Routes</a>
 
+        <a class="navbar-brand" href="#"> Api Routes </a>
         <!-- 
         <button
           class="navbar-toggler"
@@ -85,6 +85,14 @@
         </div> -->
       </div>
     </nav>
+    <h5>
+      <div class="p-4 pl">
+        Backend Server Hosted
+        <a href="http://upedd-backend.herokuapp.com/"> here </a>
+        .
+      </div>
+    </h5>
+
     <!-- ALL Tables -->
     <div class="m-3">
       <!-- Admin Auth -->
@@ -148,7 +156,7 @@
               <td>{token, refToken}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">3</th>
               <td>POST</td>
               <td>/user/auth/google</td>
               <td>{token}</td>
@@ -186,35 +194,35 @@
               <td>[Post Object, Post Object , ..]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">3</th>
               <td>GET</td>
               <td>/adminpanel/post/:category?page="pages"&limit="limit"</td>
               <td>{}</td>
               <td>[Post Object, Post Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">4</th>
               <td>POST</td>
               <td>/adminpanel/setStatus/</td>
               <td>{status,id}</td>
               <td>[Post Object]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">5</th>
               <td>GET</td>
               <td>/adminpanel/IdBlog/:id</td>
               <td></td>
               <td>Post Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">6</th>
               <td>GET</td>
               <td>/adminpanel/UserBlog/:username</td>
               <td></td>
               <td>[Post Object, Post Object , ..]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">7</th>
               <td>POST</td>
               <td>/adminpanel/editBlog</td>
               <td>
@@ -223,42 +231,42 @@
               <td>{result}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">8</th>
               <td>DELETE</td>
               <td>/adminpanel/delete/:id</td>
               <td>{username}</td>
               <td>"Blog deleted"</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">9</th>
               <td>GET</td>
               <td>/adminpanel/allEvents</td>
               <td></td>
               <td>[Event Object, Event Object, Event Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">10</th>
               <td>POST</td>
               <td>/adminpanel/setStatusOfEvent</td>
               <td>{status,id}</td>
               <td>Event Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">11</th>
               <td>GET</td>
               <td>/adminpanel/getEventbyStatus/:status</td>
               <td></td>
               <td>[Event Object, Event Object, Event Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">12</th>
               <td>DELETE</td>
               <td>/adminpanel/deleteEvent/:id</td>
               <td></td>
               <td>"Event deleted"</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">13</th>
               <td>GET</td>
               <td>/adminpanel/verifyProfile/:id</td>
               <td>{id,verify}</td>
@@ -286,7 +294,9 @@
               <td>POST</td>
               <td>/profile/add</td>
               <td>
-                {profileImage, name, lastname, username, job, country, joinDate, about, dob, linkedin, twitter, instagram, facebook, github, intrest}
+                {profileImage, name, lastname, username, job, country, joinDate,
+                about, dob, linkedin, twitter, instagram, facebook, github,
+                intrest}
               </td>
               <td>{result}</td>
             </tr>
@@ -298,53 +308,55 @@
               <td>{result, email}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">3</th>
               <td>GET</td>
               <td>/profile/:username</td>
               <td></td>
               <td>{result, email}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">4</th>
               <td>GET</td>
               <td>/profile/</td>
               <td></td>
               <td>[Profile Object, Profile Object, Profile Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">5</th>
               <td>PATCH</td>
               <td>/profile/connect/:username</td>
               <td></td>
               <td>Profile Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">6</th>
               <td>PATCH</td>
               <td>/profile/disconnect/:username</td>
               <td></td>
               <td>Profile Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">7</th>
               <td>PATCH</td>
               <td>/profile/bookmark/:id</td>
               <td></td>
               <td>Profile Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">8</th>
               <td>PATCH</td>
               <td>/profile/bookmarkdelete/:id</td>
               <td></td>
               <td>Profile Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">9</th>
               <td>PATCH</td>
               <td>/profile/update</td>
               <td>
-                {profileImage, name, lastname, username, job, country, joinDate, about, dob, linkedin, twitter, instagram, facebook, github, intrest}
+                {profileImage, name, lastname, username, job, country, joinDate,
+                about, dob, linkedin, twitter, instagram, facebook, github,
+                intrest}
               </td>
               <td>Profile Object</td>
             </tr>
@@ -373,56 +385,64 @@
               <td>username</td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">2</th>
               <td>POST</td>
               <td>/blog/Add/</td>
-              <td>{ coverImage, likes, tags, username, catagory, title, subheading, body, url }</td>
+              <td>
+                { coverImage, likes, tags, username, catagory, title,
+                subheading, body, url }
+              </td>
               <td>{ data: "id" }</td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">3</th>
               <td>POST</td>
               <td>/editBlog/</td>
-              <td>{ coverImage, likes, tags, username, catagory, title, subheading, body, url }</td>
+              <td>
+                { coverImage, likes, tags, username, catagory, title,
+                subheading, body, url }
+              </td>
               <td>Blog Object</td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">4</th>
               <td>GET</td>
               <td>/blog/posts?page="pages"&limit="limit"</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">5</th>
               <td>GET</td>
               <td>/blog/featured-posts?page="pages"&limit="limit"</td>
               <td></td>
-              <td>{success:true, posts:[BlogPost Object , BlogPostObject, ...]}</td>
+              <td>
+                {success:true, posts:[BlogPost Object , BlogPostObject, ...]}
+              </td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">6</th>
               <td>GET</td>
               <td>/blog/IdBlog/:id</td>
               <td></td>
               <td>BlogPost Object</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">7</th>
               <td>GET</td>
               <td>/blog/UserBlog/:username</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">8</th>
               <td>GET</td>
               <td>/blog/getOwnBlog</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">9</th>
               <td>GET</td>
               <td>/blog/getOtherBlog</td>
               <td></td>
@@ -430,35 +450,35 @@
             </tr>
             <!-- Revisit Bookmark Route -->
             <tr>
-              <th scope="row"></th>
+              <th scope="row">10</th>
               <td>GET</td>
               <td>/blog/BookmarkPost</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">11</th>
               <td>GET</td>
               <td>/blog/ForYou?page="pages"&limit="limit"</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">12</th>
               <td>GET</td>
               <td>/blog/ConnectionPost?page="pages"&limit="limit"</td>
               <td></td>
               <td>[BlogPost Object , BlogPostObject, ...]</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">13</th>
               <td>DELETE</td>
               <td>/blog/delete/:id</td>
               <td></td>
               <td>"Blog deleted"</td>
             </tr>
             <tr>
-              <th scope="row"></th>
+              <th scope="row">14</th>
               <td>POST</td>
               <td>/blog/reportBlog</td>
               <td>{report,blog_id}</td>
@@ -531,10 +551,10 @@
               <td>POST</td>
               <td>/event/addevent</td>
               <td>
-                { eventImage, title, subtitle, country, platform, 
-                language, timezone, day, month, year, startTime, 
-                endTime, catagory, eventDescription, link, subCategory, 
-                guest, linkedin, facebook, instagram, twitter, github, endPromotion }
+                { eventImage, title, subtitle, country, platform, language,
+                timezone, day, month, year, startTime, endTime, catagory,
+                eventDescription, link, subCategory, guest, linkedin, facebook,
+                instagram, twitter, github, endPromotion }
               </td>
               <td>
                 { msg: "Event succesfully created", result: Event Object }
@@ -548,21 +568,21 @@
               <td>[Event Object, Event Object, Event Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">3</th>
               <td>GET</td>
               <td>/event/events/:id</td>
               <td></td>
               <td>[Event Object]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">4</th>
               <td>GET</td>
               <td>/event/eventsForYou?page="page"&limit="limit"</td>
               <td></td>
               <td>[Event Object, Event Object, Event Object ...]</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">5</th>
               <td>POST</td>
               <td>/event/register</td>
               <td>{id}</td>
@@ -586,7 +606,7 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">1</th>
               <td>POST</td>
               <td>/user/confmail</td>
               <td>{user_name}</td>
@@ -600,7 +620,7 @@
               <td>User Object</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">3</th>
               <td>POST</td>
               <td>/user/changepass</td>
               <td>{user_id,password,confpassord}</td>
